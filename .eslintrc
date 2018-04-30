@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "extends": "airbnb",
+  "globals": {
+    "React": false
+  },
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "indent": [1, 2, {"SwitchCase": 1}],
+    "spaced-comment": 0,
+    "key-spacing": 0,
+    "no-multi-spaces": 0,
+    "no-use-before-define": [1, "nofunc"],
+    "react/prop-types": [1, {"ignore": ["routeParams", "dispatch"]}],
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-boolean-value": 0
+  }
+}
