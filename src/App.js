@@ -2,7 +2,8 @@ import {Component} from 'react';
 import Router, {Route, Redirect} from 'react-router';
 import {Provider} from 'react-redux';
 import {createHistory} from 'history';
-import TodosPage from './pages/TodosPage';
+//import TodosPage from './pages/TodosPage';
+import GamesForm from './pages/TodosPage/CreateGameForm';
 import configureStore from './store/applicationStore';
 
 import './App.styl';
@@ -19,7 +20,8 @@ class AppContainer extends Component {
     return (
       <Provider store={store}>
         <Router history={this.history}>
-          <Route path="/" component={TodosPage}/>
+          {/* <Route path="/" component={TodosPage}/> */}
+          <Route path="/" component={GamesForm}/>
           <Redirect from="*" to="/"/>
         </Router>
       </Provider>
