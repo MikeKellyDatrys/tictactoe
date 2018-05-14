@@ -1,10 +1,10 @@
 import {Component} from 'react';
 import {connect} from 'react-redux';
 import {loadTodos, createTodo, updateTodo} from 'ducks/todos';
-import CreateTodoForm from './CreateTodoForm';
-import TodosList from './TodosList';
-
-import './TodosPage.styl';
+//import CreateTodoForm from './CreateTodoForm';
+//import TodosList from './TodosList';
+//import './TodosPage.styl';
+import CreateGameForm from './CreateGameForm';
 
 class TodosPage extends Component {
   componentDidMount() {
@@ -22,8 +22,10 @@ class TodosPage extends Component {
   render() {
     return (
       <div className="container">
-        <CreateTodoForm onSubmit={this.createTodo.bind(this)} />
-        <TodosList todos={this.props.todos} handleTodoClick={this.toggleTodo.bind(this)} />
+        {/* want to comment this out so I can build a tictactoe app using react-redux */}
+        {/* <CreateTodoForm onSubmit={this.createTodo.bind(this)} />
+        <TodosList todos={this.props.todos} handleTodoClick={this.toggleTodo.bind(this)} /> */}
+        <CreateGameForm />
       </div>
     );
   }
