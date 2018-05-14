@@ -8,38 +8,13 @@ import './CreateGameComp.styl';
 // as user palys
 
 class Square extends Component {
-    // define constructor boiler plate code
-    // NB - react components can have state by setting `this.state` in
-    //      component constructor.
-    //      so we're going to store the current value of square in the state
-    //      and change it (i.e. update the state when the square is clicked)
-
-    //      So - adding constructor to the class to initialise the state
-    constructor(props) {
-        // NB - in Javascript classes, have to explicitly call `super();` when
-        //      defining the constructor of a subclass
-        super(props);
-        this.state = {
-            value: 'M'
-        };
-    }
-    // now that we've enabled state controll within the component, we can display
-    // the value from the current state and toggle it on click
-
-    // NB - whenever `this.setState` is called, an update to the component is scheduled
-    //      causing react to:
-    //
-    //      1. merge in the passed state update
-    //      2. render the component along with its descendants
-    //
     render() {
         return (
-            <button className="square" onClick={() => this.setState({value: 'X'})}>
-                {this.state.value}
+            <button className="square" onClick={() => this.props.onClick()}>
+                {this.props.value}
             </button>
         );
     }
-
 }
 
 // now export Square component
